@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Source+Sans+3:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "on-primary-container": "#7c839b",
+                            "surface-tint": "#565e74",
+                            "on-secondary-container": "#745c00",
+                            "on-error-container": "#93000a",
+                            "secondary-container": "#fed65b",
+                            "on-surface-variant": "#45464d",
+                            "tertiary": "#000000",
+                            "on-tertiary-fixed": "#1b1c15",
+                            "on-tertiary": "#ffffff",
+                            "surface-bright": "#f8f9ff",
+                            "secondary-fixed": "#ffe088",
+                            "on-background": "#0d1c2e",
+                            "inverse-primary": "#bec6e0",
+                            "secondary-fixed-dim": "#e9c349",
+                            "on-tertiary-fixed-variant": "#46473f",
+                            "on-primary-fixed": "#131b2e",
+                            "on-primary": "#ffffff",
+                            "on-secondary": "#ffffff",
+                            "on-error": "#ffffff",
+                            "surface": "#f8f9ff",
+                            "on-secondary-fixed": "#241a00",
+                            "background": "#f8f9ff",
+                            "surface-container-high": "#dce9ff",
+                            "secondary": "#735c00",
+                            "on-tertiary-container": "#84847b",
+                            "on-primary-fixed-variant": "#3f465c",
+                            "inverse-surface": "#233144",
+                            "tertiary-fixed-dim": "#c7c7bc",
+                            "primary-fixed-dim": "#bec6e0",
+                            "error": "#ba1a1a",
+                            "surface-container": "#e6eeff",
+                            "surface-variant": "#d5e3fc",
+                            "inverse-on-surface": "#eaf1ff",
+                            "on-surface": "#0d1c2e",
+                            "outline-variant": "#c6c6cd",
+                            "surface-dim": "#ccdbf3",
+                            "tertiary-container": "#1b1c15",
+                            "primary-container": "#131b2e",
+                            "primary": "#000000",
+                            "primary-fixed": "#dae2fd",
+                            "error-container": "#ffdad6",
+                            "tertiary-fixed": "#e4e3d7",
+                            "surface-container-highest": "#d5e3fc",
+                            "surface-container-low": "#eff4ff",
+                            "outline": "#76777d",
+                            "on-secondary-fixed-variant": "#574500",
+                            "surface-container-lowest": "#ffffff",
+                            "custom-cyan": "#00FFFF"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                        },
+                        "spacing": {
+                            "margin-mobile": "16px",
+                            "unit": "8px",
+                            "margin-desktop": "40px",
+                            "gutter": "24px",
+                            "container-max": "1280px"
+                        },
+                        "fontFamily": {
+                            "body-md": ["Source Sans 3"],
+                            "headline-md": ["Libre Caslon Text"],
+                            "display-lg": ["Libre Caslon Text"],
+                            "display-lg-mobile": ["Libre Caslon Text"],
+                            "label-md": ["Source Sans 3"],
+                            "body-lg": ["Source Sans 3"],
+                            "headline-sm": ["Libre Caslon Text"]
+                        },
+                        "fontSize": {
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                        },
+                        "animation": {
+                            "slow-float": "slow-float 6s ease-in-out infinite",
+                        },
+                        "keyframes": {
+                            "slow-float": {
+                                "0%, 100% { transform: translateY(0px) rotate(0deg); }": "",
+                                "50% { transform: translateY(-20px) rotate(1deg); }": "",
+                            }
+                        }
+                    },
+                },
+            }
+        } catch (_e) {}
+    </script>
+<style>
+        @keyframes slow-float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+        }
+        .animate-slow-float {
+            animation: slow-float 6s ease-in-out infinite;
+        }
+        .portrait-glow {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+            transition: all 0.5s ease;
+        }
+        .portrait-glow:hover {
+            box-shadow: 0 0 35px rgba(0, 255, 255, 0.4);
+            transform: scale(1.05) translateY(-5px);
+            z-index: 50;
+        }
+        .social-glow:hover svg {
+            filter: drop-shadow(0 0 8px currentColor);
+        }
+        .cosmic-bg {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJHIhxiJIqiB20d5NTWi3cEP7IFH7H9t5Qkz3HBx2mb1VVrXF6fHaBouF7BnJPaRsz5ieuxRCMV2MgNUdwlza2WW-19eZWORKmhYVkFhUNlQ1WPBgBYlJdZkFXu6e_0Duk7RhDlQM8QDAQ_vbqa1l0eitF0zqDPm65gCrimGihzVSxp3P2ubW4hMImBBKS55xUFrAptbxqqFLrq4QeX9YB7sEcruVC9Nemd5D3G0EH-bYiTycQupgwY0oPrqWi1jbqiw');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        /* Unified portrait dimension constraints */
+        .unified-portrait {
+            width: 144px; /* Fixed width (~36 md:w-36) */
+            height: 192px; /* Fixed height (4:3 ratio approx) */
+        }
+        @media (min-width: 768px) {
+            .unified-portrait {
+                width: 160px; /* md scale */
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body class="cosmic-bg text-surface font-body-md overflow-x-hidden min-h-screen flex flex-col selection:bg-custom-cyan selection:text-on-background">
+<!-- Header -->
+<header class="w-full top-0 sticky z-[100] backdrop-blur-md bg-on-background/20">
+<div class="flex justify-start items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<img alt="Logo Científicos de la Historia" class="w-auto h-32 md:h-40 object-contain transition-transform hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtC8Ojc567hCoZ0nl87eBds3Av0LhhvIPVUVFroUVCAfBFK-qS1qH6IdqSVuLA3ATKXJW42oHfdguAjFxiV9A1_Bu0pBlFcPSNK7Jfg-x9x5Gw_ZkqbFC9ImZ0z1oynlO64m7kZ33HL5Lzn-3T-qwP1uGelhAIq0m4KUtGqOWIEbN09N2f6gVnUzNBsvBx-2TcOPI_Aa7Rvv3yQojJfzJyqNgUcjeKHK1ut5n2QTGkaMhwLDm6fKiCYV7InvIDeGGTJw"/>
+</div>
+</header>
+<main class="relative flex-grow min-h-[1200px]">
+<!-- Digital Exhibition Canvas (Nebula) -->
+<div class="absolute inset-0 pointer-events-none"><!-- Top Row: 4 Images aligned horizontally -->
+<div class="absolute top-[5%] left-[5%] animate-slow-float pointer-events-auto" style="animation-delay: 0s;">
+<img alt="Pierre Curie" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhhtQ20jM-RcmOC3J009MRo0XNa7djeLcuOl8J2IHYB4dnvVhTps7fIMbVc0vSujd3aaFRu-ZdwYkJqMq397NYUG302PVTZf0SX9mJMt-U0h_kDcY5wXf0OP69c7cjUW46j01YkUeTac9kshk9w_rujhfBs-zjGpkAnPzA5bfDEFU_s83fme1iXNoH3Tz6tgmW_sGoPLEKEXrvcCnrnlcXnodnngmwVIlZO1BZ2gTlcTr1VsAv1-R40prS68aVK0EH0Q"/>
+</div>
+<div class="absolute top-[5%] left-[28%] animate-slow-float pointer-events-auto" style="animation-delay: 1.2s;">
+<img alt="August Weismann" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADAifFcZWCyuJAoY8N1Wl4MhBsFGptYX7NhWlcS58jIScRv1QRbSxBoKIXiAYA1hAO1OfUdox0d0DtO1Vf3IA3tck7jVMmdERR0r8w-WhneARgpSKl_yh6OuRNXEigF_yje4p73KYOzNYd-J-3xW2uphalsCDHv2BUdJWyjYxuCMVXCZnQVGDIxiagkZZLpOuSzoaDdD58PZAneEPXcZD9FkWeg03UzjHDERBrS8E29vdQW72JD9xh_qOlDzoNbUBNOw"/>
+</div>
+<div class="absolute top-[5%] left-[51%] animate-slow-float pointer-events-auto" style="animation-delay: 0.8s;">
+<img alt="Johannes Gutenberg" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiKxih7SKFvqIClUF65nrjNgpHHiEWgFhQsapJbeyfX-qrvWR4eZmTYVyf60zAQILaj8wPsALil-Vil4eoWAkLxcC7vEzJtuoh-XVACDrR44uWF7SzdtiesLPbVsgmUOZZSrTdvhZ8Mie40e9ZB4JwS9aiCKFKTQTb_LFGb6DXXtphPf7dhc95GXlHG8JFnC8u1zGn4JLM3pDE8RCKUAFHWfY1zlhd3cEGcr2pUIDYyuu2BNGJds-eIwM5D48om8nzhg"/>
+</div>
+<div class="absolute top-[5%] left-[74%] animate-slow-float pointer-events-auto" style="animation-delay: 1.5s;">
+<img alt="Leonardo Da Vinci" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2d-_kEJtqKqDvZ1WHxBJgqFuwAjLrmoQZJlpFjP23dhvHkv7vkWZZfAagvPIRMJ2t4ccPkZ_Ny2tWE79aLderreQ7jx1o_t3MQ5QjmBcHiFXpcfoU-V4Ig1nYdIC62z4KYxbEJA7y3ELDVbktYAd7XPYdqKkinpGd1F_DdiwVHsZ5uuyAwkzZhOjuOPEGv5hs7jtZyoV609wnl53-Cm7kn_43mNs5MT9eB26ObJRuXa3AVg7UiF6puSC7veXlkzaX6g"/>
+</div>
+<!-- Remaining 8: Arranged in a flow below, avoiding the text block (which is right-aligned/bottom-heavy) -->
+<div class="absolute top-[30%] left-[5%] animate-slow-float z-10 pointer-events-auto" style="animation-delay: 0.5s;">
+<img alt="Marie Curie" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdTHJTkpHJ50pkPsyuE57REXfDAX5jaGTkiRw132jCC2kf8fMi_mqXIwO-aGN-nwoyWLYBW06NCXBCP6hnjMZ0d4EjqrzDee79Fu5cGVDgqlISN0eDACXiLuq6lmwq3XPQez-enq4QbI-E4GyUUc-Vj4OX1YclzHnIQh9M6m2-zDDTgPbiVuoIhqQ-ieY7LcZTgEmtMrYBJZRy6K_JUmQBpmCkN-9oC0UcmW52m5iQF4BbbtwO_uAaVs1vUT7_zoFDSQ"/>
+</div>
+<div class="absolute top-[30%] left-[28%] animate-slow-float pointer-events-auto" style="animation-delay: 0.3s;">
+<img alt="Aristóteles" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcrFAghTLdFHo2l2kX3IEmr0_A_y2MsA-BGgVJV8gQjtr-OAiREg19OBh_ILNcAUQ2lRQnsa_eWor9Sr8J04nz559nZOiOI5ASMP2u89fUsMVCcSR-TV1nCwnvCA6Nr0eOvGdzYqzOF1H8JJr_RyhlqeP-IdOWdmhuz0U4oWU-SavGuE4DOhKfSUdGxg3YMaWbAZC6nsiOeoQ71bBCHsYXwVvYTGU4bp7bqTxhi2JF05q62TmdhnZ_MHBU8bkOLsw1-A"/>
+</div>
+<div class="absolute top-[55%] left-[5%] animate-slow-float pointer-events-auto" style="animation-delay: 1.7s;">
+<img alt="Louis Pasteur" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8wlyF4ODu18YLSrwumoDAaKrXs5EmBtd8taPW9D502xD54cZ1fvQZvec2AjyJDshqTbbrg8dQwDgauZFjg3ojoAzvHU12RzAbrynReTexHnsTmbiWLdQXhGUvqsfFCwq511pmVUwFWK5SHIozKCysUCIMPmarbIplnTo5HZTcigl74x8dRmDSxKjcRnf2VIISRfZ8Jss1UDHVv6_nqNR-3Fu3UUxEfQ-9D4ZZPfXf08swUew2KztbSjvSKsHWjmq2Zw"/>
+</div>
+<div class="absolute top-[55%] left-[28%] animate-slow-float pointer-events-auto" style="animation-delay: 0.6s;">
+<img alt="Charles Darwin" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGlueBF-NXpSVWFIwkob2kiw2qJcswQAul-yOfnwqmVPkyDz5C4hNbMBliFeB_G8gq3OhlH2DF3xR77OlyLcYnweNev0k0WKggXH3OUq1jTbA_F7LIRSWk2M0IT08DW6HhYjq9elNH7TdjTpwaJmBj7UXSkFNrNwCwlYCQPaUVAGvuTk2KPqgvn8pPPPHiRzuCPrt1o1Kr7psfyHUxKZXzSwQDyZi7EiCty648FsUlK-FyQFOpzFQPKNo_MAURR60PTg"/>
+</div>
+<div class="absolute top-[80%] left-[5%] animate-slow-float pointer-events-auto" style="animation-delay: 1.4s;">
+<img alt="Isaac Newton" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_7YeOqku2PX5YUBCH9o8XuohsantWtTLa6gnRYE_uUExixLsBJMkop1R0RHnJm9gFQnigHwVfWhuc88CXkq-D7kzoue87k_LujBnuuYAFfse_RyHWXuIlemrNVKIfvy2rdNn5HSstR4lfpATR-wTfXAHGR_IYWwV-yvgRfTK0hp0UjqHVQTPRm9uPF0Blxs7AbZkwhxlqhluG2Zpql-YOooKIOUReJdzSO1ZCzHZsKLS7uUz_2UD9oKMUyH2MFZPlbA"/>
+</div>
+<div class="absolute top-[80%] left-[28%] animate-slow-float pointer-events-auto" style="animation-delay: 2s;">
+<img alt="Nikola Tesla" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLMizEiLeAB7qrXHXglgEEo3G-HZ6S6D1hDp_306-q_T_r8SHbliaggehPqsey9DKhChUgLm5d2buKm6BwjNSFVin-eUtRji2i7oboTU1sJM7dYPL6Kd5bQhnYdHJLjpmearxcD23c9qqvo6Ys2eJEGzdCTwYrko8TCwIXA6MsN3sCBlfZcD3umfzh1wGgGoM9htU-CpZBUz33ruulsDWpbe5n9P1kyFyvS4DMeYVh2gQqlRjF4Ljwmvh7WVQSvbJHCg"/>
+</div>
+<div class="absolute top-[30%] left-[78%] animate-slow-float pointer-events-auto" style="animation-delay: 1.1s;">
+<img alt="Galileo Galilei" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb7tgakgZkmIOcWVG9spuYXr_MJgstWUARJdYtgPS0yPGSddIbVG3419b3fpc8nwgGUmWWpXPACrKWLbQ941El8fORFujV3DspVyhSkxDXyqzahDcNXhpXIkwCRvvnLOO8I14yMcVxrwOGbY1_L-pv75lzyzCFD6orrMC499ogFw4McA7eL-V1KYnaDKq96N21kk45ZzaZ3vCQJWv0bfQ8HSCQz8iB1_hULQdjfxn3YFfpggbCDPU2AYKAKfJ0UtMs6g"/>
+</div>
+<div class="absolute top-[80%] left-[78%] animate-slow-float pointer-events-auto" style="animation-delay: 0.9s;">
+<img alt="Gregor Mendel" class="portrait-glow rounded-xl unified-portrait object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPQe5ZKUdC5OIEBuRdDLbrtQ7VfOx5BYwjl64fBQ--4kavFW02IUtxS-_ehzrhfL4Sj1gQrmdFWgfzAfNC9dEYgPcjkr044lKTNuVwM8koyzsZ0cslwnx9SW3v58cfx7TQZEwxQjwnBVn5THrk-kTrx_25sdjCVLK0Vx1Q8Iru---nRlXg_RCj4bI7kaoKqLazIQOk-mdSf8tr3PxCNDVzU8sZPt-_KnTkCHBNlNDmCCeDS_j9kgzMA4HAYnyn7dxXyw"/>
+</div></div>
+<!-- Narrative Content Overlay -->
+<div class="container mx-auto px-margin-desktop relative z-20 flex flex-col items-end pt-96 md:pt-[500px]">
+<div class="max-w-xl w-full text-right md:text-left md:ml-auto">
+<h1 class="font-display-lg text-4xl md:text-display-lg text-custom-cyan mb-8 tracking-tight uppercase">
+<span class="block">Científicos de</span>
+<span class="block md:pl-48">la Historia</span>
+</h1>
+<div class="space-y-6 border-l md:border-l-0 md:border-r border-custom-cyan/30 pl-6 md:pl-0 md:pr-10">
+<p class="font-body-lg text-body-lg leading-relaxed text-justify" style="color: rgba(219, 213, 221, 0.8);">
+                    Nuestra brújula del conocimiento no apunta hacia el norte, sino hacia la <span style="color: #00FFFF;">verdad empírica</span>. En este santuario digital, preservamos el legado de aquellos que desafiaron las sombras de la ignorancia para iluminar el camino de la humanidad. Cada perfil es un testimonio de curiosidad infinita, rigor académico y la audacia de preguntar "¿por qué?".
+                </p>
+<p class="font-body-lg text-body-lg leading-relaxed text-justify" style="color: rgba(219, 213, 221, 0.4);">
+                    Explore las vidas, los fracasos y los triunfos de los arquitectos de nuestra realidad moderna. Bienvenidos a la gran cronología del pensamiento científico.
+                </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-gradient-to-t from-on-background to-transparent mt-20">
+<div class="flex flex-col items-center gap-10 px-margin-desktop max-w-container-max mx-auto text-center">
+<!-- Social Icons with Official Brand Colors and Glow -->
+<div class="flex gap-12 items-center">
+<a class="social-glow text-[#1877F2]" href="https://www.facebook.com/profile.php?id=61577496146715&amp;locale=es_LA" rel="noopener noreferrer" target="_blank">
+<svg class="w-12 h-12 transition-transform hover:scale-110" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="social-glow text-white" href="https://www.tiktok.com/@cientificosdelahistoria" rel="noopener noreferrer" target="_blank">
+<svg class="w-12 h-12 transition-transform hover:scale-110" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.03 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.81.31-.75.42-1.24 1.21-1.35 2.06-.11.97.31 1.99 1.05 2.61.77.64 1.84.87 2.81.58 1.03-.25 1.81-1.1 2.04-2.12.07-.38.06-.78.06-1.17V0z"></path></svg>
+</a>
+<a class="social-glow text-[#E4405F]" href="https://www.instagram.com/cientificosdelahistoria/" rel="noopener noreferrer" target="_blank">
+<svg class="w-12 h-12 transition-transform hover:scale-110" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.981 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+</a>
+<a class="social-glow text-[#FF0000]" href="https://www.youtube.com/@CientificosDeLaHistoria" rel="noopener noreferrer" target="_blank">
+<svg class="w-12 h-12 transition-transform hover:scale-110" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
+</div>
+<p class="font-body-md text-custom-cyan/40 text-sm tracking-[0.2em] uppercase">
+            © 2024 CIENTÍFICOS DE LA HISTORIA • PRESERVANDO EL PENSAMIENTO HUMANO
+        </p>
+</div>
+</footer>
+</body></html>
